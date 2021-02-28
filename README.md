@@ -7,6 +7,6 @@ Repo for Team 4's COLX 523, Corpus annotation project
 
 Required documents:
 
-1. [Team work contract]()
-2. [Project proposal]()
-3. [Corpus collection POC]()
+1. [Team work contract](https://github.ubc.ca/dinganc/COLX_523_team4/blob/master/milestone1/1_teamwork_contract.ipynb)
+2. [Project proposal](https://github.ubc.ca/dinganc/COLX_523_team4/blob/master/milestone1/2_project_proposal.md)
+3. [Corpus collection POC](https://github.ubc.ca/dinganc/COLX_523_team4/blob/master/src/m1_corpus_poc.ipynb)
