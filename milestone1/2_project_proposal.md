@@ -45,4 +45,4 @@ Annotation chart
 
 #### Milestone
 
-![avatar](C:/Users/Administrator.DESKTOP-6SMDI82/COLX_523_team4/Lisa/milestone.png)
+![](./img/timeline.png)
