@@ -88,4 +88,6 @@ If no labels apply to a particular text, select ‘None of the above’
  
 2. Amount of time spent for the course:
     Examples:
-        - With few hours per week, this course is able to give learners a thorough view and fundamental Excel skills.       
+        - With few hours per week, this course is able to give learners a thorough view and fundamental Excel skills. 
+        
+        
