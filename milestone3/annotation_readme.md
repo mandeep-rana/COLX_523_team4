@@ -32,10 +32,10 @@ For the final annotation we chose the second approach: high pay and high standar
 2. [Mechanical Turk file]()
 3. [Final *single* annotation file (291 annotations with text)]()
 
-## Reflection on the process
-**Corpus**
+## Challenges
+**Corpus**</br>
 Also mentioned in milestone 2, the corpus includes many non-English reviews that cannot be filtered out nor avoided when sampling for annotation. To deal with this problem, we asked all annotators to mark all non-English texts with empty labels.
 
-**Mechanical Turk**
+**Mechanical Turk**</br>
 As this annotation task requires detailed definition for each label to facilitate interannotator agreement, it is not the most suitable task for crowd sourcing on Mechanical Turk. Annotators were not motivated to look through the annotation guidelines in detail, and sometimes they would choose a single annotation label instead of multiple ones, just to complete the task as quickly as possible. To counter this inherit problem of Mechanical Turk, we set the annotator requirement to have a high approval rate, so they are more motivated to be *correct* instead of *quick*. 
 
