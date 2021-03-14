@@ -30,3 +30,7 @@ Corpus:
 Annotation pilot study:
 1. [Sampled data for annotation](https://github.ubc.ca/dinganc/COLX_523_team4/blob/master/annotation/sampled_reviews.csv)
 2. [MTurk annotated sampled data](https://github.ubc.ca/dinganc/COLX_523_team4/blob/master/annotation/sampled_reviews_annotated.csv)
+
+## Milestone 3
+
+Please refer to `1_annotation_readme.md` in `milestone3` folder.
