@@ -10,7 +10,9 @@ Our team would like to break down each review into different aspects and label t
 
 
 
-
+<br>
+<br>
+<br>
 
 
 
@@ -19,7 +21,9 @@ Our team would like to break down each review into different aspects and label t
 This corpus contains 19822 reviews over 90 Coursera courses along with some metadata about each course. Each course is associated with a unique URL, a course name, the instructor name (in the case where there are multiple instructors to the course, only the first name is shown), and an overall rating of the course ranging from 1 to 5 stars. Each review is also associated with a rating that the user has chosen, which contributes to the overall rating of the course.
 
 
-
+<br>
+<br>
+<br>
 
 
 
