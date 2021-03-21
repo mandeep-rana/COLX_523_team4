@@ -13,7 +13,8 @@
 
 ## Corpus readme
 **Homepage:**<br>
-On homepage, you can find a brief explanation of why we chose to create this corpus, as well as some general stats about it.
+On homepage, you can find a brief explanation of why we chose to create this corpus, as well as some general stats about it. <br>
+If you would like to return to the homepage after a search, click on the URL bar and press enter will bring back the homepage.
 
 **Search bar:**<br>
 The search bar is always on the left hand side of the page. <br>
