@@ -34,3 +34,7 @@ Annotation pilot study:
 ## Milestone 3
 
 Please refer to `1_annotation_readme.md` in `milestone3` folder.
+
+## Milestone 4
+
+Please refer to `1_milestone4_readme.md` in `milestone4` folder.
