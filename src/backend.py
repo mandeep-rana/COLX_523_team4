@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
 from fastapi.responses import FileResponse, HTMLResponse
-from nltk.corpus import brown
 from collections import defaultdict
 import matplotlib
 
@@ -19,7 +18,7 @@ app = FastAPI()
 
 
 def get_courses(course, rating):
-    """given course keyword and rating, return corresponding reviews for that course and with that rating"""
+    """given course keyword and/or rating, returns corresponding reviews for that course and with their selected rating"""
     engine = create_engine("sqlite:///d2.db")
     with engine.connect() as con:
         query = f"SELECT a.title, b.review, a.average_rating FROM courses a , reviews b where a.title like '%{course}%' and a.url = b.course_url"
@@ -48,7 +47,7 @@ def get_courses(course, rating):
 
 
 def get_all_courses():
-    """create a dictionary which contains the counts of POS from the genre of the Brown corpus corresponding to category"""
+    """This function gets the list of all the 90 courses from databases"""
     engine = create_engine("sqlite:///d2.db")
     with engine.connect() as con:
         query = f"SELECT title FROM courses"
@@ -72,7 +71,7 @@ def get_all_courses():
 
 
 def get_annotation(annotation):
-    """return annotation results baed on input category"""
+    """return annotation, couse, review and ratings based on input category"""
     engine = create_engine("sqlite:///d2.db")
     with engine.connect() as con:
         query = f"select c.title,b.review,b.rating  from annotation a , reviews b, courses c where a.{annotation}='T' and a.id = b. id and b.course_url = c.url"
@@ -81,7 +80,7 @@ def get_annotation(annotation):
         S = []
         count = 0
         S.append(
-            "<div id='table-wrapper'> <div id='table-scroll'><table border =1  class='ex_table'><tr><th>Title</th><th>Review</th><th>Rating</th></tr>"
+            "<div id='table-wrapper'> <div id='table-scroll'><table border =1  class='ex_table'><tr><th>Title</th><th>Review (" + annotation + ")</th><th>Rating</th></tr>"
         )
         for row in rs:
             count += 1
@@ -98,11 +97,11 @@ def get_annotation(annotation):
 
 
 def get_reviews(review, rating):
-<<<<<<< HEAD
-    """create a dictionary which contains the counts of POS from the genre of the Brown corpus corresponding to category"""
-=======
     """given input review keyword and rating, return corresponding reviews satisfying the query"""
+    engine = create_engine("sqlite:///d2.db")
+    with engine.connect() as con:
         query = f"select course_url,review_date,helpful_count,rating,review from reviews where review like '%{review}%'"
+        if rating != 0:
             query = query + " and rating >= " + rating
 
         rs = con.execute(query)
@@ -131,11 +130,7 @@ def get_reviews(review, rating):
 
 
 def get_instructor(instructor, rating):
-<<<<<<< HEAD
-    """create a dictionary which contains the counts of POS from the genre of the Brown corpus corresponding to category"""
-=======
     """return corresponding reviews that are about courses taught by given instructor"""
->>>>>>> f022b1bec787cde847a78a5db20d71177ea73a5b
     engine = create_engine("sqlite:///d2.db")
     with engine.connect() as con:
         query = f"select title,instructor,average_rating,course_url,review_date,helpful_count,rating,review from reviews left join courses on reviews.course_url=courses.url where instructor  like '%{instructor}%'"
@@ -170,11 +165,7 @@ def get_instructor(instructor, rating):
 
 
 def get_annotation_count():
-<<<<<<< HEAD
-    """create a dictionary which contains the counts of POS from the genre of the Brown corpus corresponding to category"""
-=======
     """annotation distribution statistics, for graphing purposes"""
->>>>>>> f022b1bec787cde847a78a5db20d71177ea73a5b
     engine = create_engine("sqlite:///d2.db")
     with engine.connect() as con:
         query = f"select * from annotation"
@@ -197,11 +188,7 @@ def get_annotation_count():
 
 
 def get_rating_count():
-<<<<<<< HEAD
-    """create a dictionary which contains the counts of POS from the genre of the Brown corpus corresponding to category"""
-=======
     """rating distribution statistics, for graphing purposes"""
->>>>>>> f022b1bec787cde847a78a5db20d71177ea73a5b
     engine = create_engine("sqlite:///d2.db")
     with engine.connect() as con:
         query = f"select rating from reviews"
@@ -224,12 +211,7 @@ def get_rating_count():
 
 
 def save_bar_graph(count_dict, filename, get_title, x_label):
-<<<<<<< HEAD
-    """given a dictionary of POS tags and their counts, create a bar graph and output
-    the image to the provided file"""
-=======
-    """produce bar graphs from given statistics"""
->>>>>>> f022b1bec787cde847a78a5db20d71177ea73a5b
+    """produce bar graphs from given statistics """
 
     sorted_annotation = sorted(
         count_dict.keys(), key=lambda x: count_dict[x], reverse=True
@@ -257,14 +239,17 @@ def get_file(filename):
 
 
 @app.get("/pos/")
-def display_pos(genre, rating, annotation, review, instructor, mode):
+def display_pos(genre, rating, annotation, review, instructor, mode, all):
+    "Main function to display the page based on the query generated"
     count_dict = get_annotation_count()
     count_dict1 = get_rating_count()
+    if all == "courses":
+        
+       return HTMLResponse(get_all_courses())
     if mode == "ann_graph":
         save_bar_graph(
-            count_dict, "ann_graph.png", "Total count Annotation wise", "Annotations"
+            count_dict, "ann_graph.png", "Total Annotation Count Category-wise", "Annotations"
         )
-        # return FileResponse("ann_graph.png")
         return HTMLResponse(
             '<div align=center><img src="ann_graph.png?'
             + str(random.randint(1, 1000))
@@ -275,7 +260,6 @@ def display_pos(genre, rating, annotation, review, instructor, mode):
         save_bar_graph(
             count_dict1, "rate_graph.png", "Distribution of ratings count", "Ratings"
         )
-        # return FileResponse("rate_graph.png")
         return HTMLResponse(
             '<div align=center><img src="rate_graph.png?'
             + str(random.randint(1, 1000))
@@ -293,13 +277,9 @@ def display_pos(genre, rating, annotation, review, instructor, mode):
     if len(instructor) != 0:
 
         return HTMLResponse(get_instructor(instructor, rating))
+
+        
     get_annotation_count()
-
-
-@app.get("/all/")
-def display_pos():
-
-    return HTMLResponse(get_all_courses())
 
 
 if __name__ == "__main__":

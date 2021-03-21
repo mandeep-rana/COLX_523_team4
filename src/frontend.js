@@ -3,10 +3,15 @@ function clearFields() {
 document.getElementById("form").reset();
 }   
 
+function update_value() {
+    document.getElementById("courses").value = "courses";
+    update_page()  
+
+}  
 
 function check_blank() {
 	var textbox = document.getElementById("textbox").value;
-    document.getElementById("textbox1").value == "test";
+    
 
     if (!textbox.match(/\S/)) 
 	{ 
@@ -109,18 +114,9 @@ function update_page() {
 	xmlHttpRqst.onload = function(e) {insert_result(xmlHttpRqst.response);} 
 	xmlHttpRqst.open( "GET", "/pos/?" + queryString);
 	xmlHttpRqst.send();
+    document.getElementById("courses").value = "";
 	
 }
 
-function show_all() {
-	var form = document.getElementById("form");
-	var formData = new FormData(form);
-	var searchParams = new URLSearchParams(formData);
-	var queryString = searchParams.toString();
-	xmlHttpRqst = new XMLHttpRequest( )
-	xmlHttpRqst.onload = function(e) {insert_result(xmlHttpRqst.response);} 
-	xmlHttpRqst.open( "GET", "/all/?" + queryString);
-	xmlHttpRqst.send();
-	
-}
+
 
