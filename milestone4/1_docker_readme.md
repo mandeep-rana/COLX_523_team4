@@ -12,15 +12,16 @@
 
 
 ## Corpus readme
-**Homepage:**
+**Homepage:**<br>
 On homepage, you can find a brief explanation of why we chose to create this corpus, as well as some general stats about it.
 
-**Search bar:**
+**Search bar:**<br>
 The search bar is always on the left hand side of the page. <br>
 We provide you with 3 features, **please note that you can only perform 1 of the 3 options at a time. E.g. showing the corpus statistics graphs while searching for annotation does not work.**
 1. Full-corpus search 
 2. Annotations
 3. Corpus statistics graphs
 
+<br>
 1. Full-corpus search <br>
 There are 3 ways to perform a keyword search on the entire corpus: by course name, by review keyword, by instructor
