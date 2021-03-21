@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+nltk
+matplotlib
+numpy
+sqlalchemy
+aiofiles
