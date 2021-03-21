@@ -23,11 +23,15 @@ We provide you with 3 features, **please note that you can only perform 1 of the
 3. Corpus statistics graphs
 
 <br>
+
 1. **Full-corpus search** <br>
 There are 3 ways to perform a keyword search on the entire corpus: by course name, by review keyword, by instructor.<br>
 Please fill in one of the blue boxes below (when you start typing in one, the other fields will be automatically cleared to ensure an unambiguous search):<br>
-![search_course](img/course.png) <br>
-![search_review](img/review.png) <br>
+
+![search_course](img/course.png)
+
+![search_review](img/review.png)
+
 ![search_instructor](img/instructor.png)
 
 This returns all course reviews satisfying the search condition.
