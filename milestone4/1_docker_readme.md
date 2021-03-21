@@ -25,14 +25,21 @@ We provide you with 3 features, **please note that you can only perform 1 of the
 <br>
 
 1. **Full-corpus search** <br>
-There are 3 ways to perform a keyword search on the entire corpus: by course name, by review keyword, by instructor.<br>
-Please fill in one of the blue boxes below (when you start typing in one, the other fields will be automatically cleared to ensure an unambiguous search):<br>
+There are 3 ways to perform a keyword search on the entire corpus: by course name, by review keyword, and by instructor.<br>
+Please fill in one of the blue boxes in the search bar (when you start typing in one, the other fields will be automatically cleared to ensure an unambiguous search):<br>
 
 `Please enter a course name` <br>
+
 `Search review by keyword` <br>
+
 `Search review by instructor` 
 
 This returns all course reviews satisfying the search condition.
 
+<br>
+
 2. **Annotations** <br>
 To only see annotated reviews, use the `Select an annotation` box, and select a category from the drop down menu to see annotated reviews mentioned the chosen aspect.<br>
+
+3. **Corpus statistics graphs** <br>
+Use the box `Select graph to display` to view the distribution of review ratings or the distribution of annotation categories across the corpus.
