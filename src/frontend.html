@@ -28,16 +28,16 @@ Select course rating: <br><br>
    <option value="5">5</option>
 </select> 
 
-<button type="button" onclick="check_blank()"> Search </button><br><br>
-Click <a href="/all/" target="maintext"  onclick="show_all()" >here</a> to display list of all the courses<br><br>
+<button type="button" onclick="check_blank()" > Search </button><br><br>
+<input type="hidden" name="all" id="courses" value = "" > 
+Click <button type="button" onclick="update_value()"> Courses </button> to display list of all the courses<br><br>
 </div>
 <br> 
-<!-- <input type="radio" name="mode" value="table"> table <br>
-<input type="radio" name="mode" value="graph"> graph <br> <br>-->
+
 <div class="myDiv">
 Select an annotation: <br><br>
 <select name="annotation" onclick="clearFields()" onchange="update_page()">
-  <option value="default">Select an annotation</option>
+  <option value="default">Select an annotation category</option>
    <option value="content">Content</option>
    <option value="course_delivery">Course delivery</option>
    <option value="difficulty">Difficulty</option>
@@ -78,8 +78,7 @@ Select review rating: <br><br>
 </div>
 
 <br> 
-<!-- <input type="radio" name="mode" value="table"> table <br>
-<input type="radio" name="mode" value="graph"> graph <br> <br>-->
+
 <div class="myDiv">
 Select graph to display: <br><br>
 <select name="mode" onchange="update_page()">

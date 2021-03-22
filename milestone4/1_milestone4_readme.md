@@ -13,8 +13,8 @@
 - [HTML](https://github.ubc.ca/dinganc/COLX_523_team4/blob/master/src/frontend.html)
 
 **Documentation**
-- [.txt Technical documentation of the front end]()
-- [Peer review docker/interface readme](https://github.ubc.ca/dinganc/COLX_523_team4/blob/master/milestone4/1_docker_readme.md)
+- [.txt Technical documentation of the front end](https://github.ubc.ca/dinganc/COLX_523_team4/blob/master/milestone4/2_frontend_readme.txt)
+- [Peer review docker/interface readme](https://github.ubc.ca/dinganc/COLX_523_team4/blob/master/milestone4/3_docker_readme.md)
 
 ## Docker
 **Docker image**
