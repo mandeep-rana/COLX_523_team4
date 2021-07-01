@@ -1,0 +1,121 @@
+<html> 
+<head>
+<script language="javascript" type="text/javascript" src="frontend.js"> </script>	
+<link rel="stylesheet" type="text/css" href="frontend.css">
+<style>
+  body {
+    background-color: #E6E6FA;
+  }
+</style>
+</head>
+<body >
+<div>
+  
+<div class="sidebar">
+<form action="/pos/" id="form"> 
+ <div class="myDiv">
+Please enter course name : <br>
+
+<input type="text" name="genre" id="textbox"  onclick="clearFields()" maxlength =40> <br><br>
+
+Select course rating: <br><br>
+<select name="rating" >
+  <option value="0">Select rating</option>
+   <option value="1">> 1</option>
+   <option value="2">> 2</option>
+   <option value="3">> 3</option>
+   <option value="4">> 4</option>
+   <option value="5">5</option>
+</select> 
+
+<button type="button" onclick="check_blank()" > Search </button><br><br>
+<input type="hidden" name="all" id="courses" value = "" > 
+Click <button type="button" onclick="update_value()"> Courses </button> to display list of all the courses<br><br>
+</div>
+<br> 
+
+<div class="myDiv">
+Select an annotation: <br><br>
+<select name="annotation" onclick="clearFields()" onchange="update_page()">
+  <option value="default">Select an annotation category</option>
+   <option value="content">Content</option>
+   <option value="course_delivery">Course delivery</option>
+   <option value="difficulty">Difficulty</option>
+   <option value="workload">Workload</option>
+   <option value="usefulness">Usefulness</option>
+</select> <br> <br> 
+</div>
+<br> 
+<div class="myDiv">
+Search review by keyword : <br>
+
+<input type="text" name="review" id="textbox1"  onclick="clearFields()" maxlength =40> <br><br>
+Select review rating: <br><br>
+<select name="rating"  >
+  <option value="0">Select rating</option>
+   <option value="1">> 1</option>
+   <option value="2">> 2</option>
+   <option value="3">> 3</option>
+   <option value="4">> 4</option>
+   <option value="5">5</option>
+</select> <br><br>
+<button type="button" onclick="check_blank1()"> Search </button><br><br>
+</div>
+<br> 
+<div class="myDiv">
+Search review by instructor : <br>
+<input type="text" name="instructor" id="textbox2" onclick="clearFields()" maxlength =40> <br><br>
+Select review rating: <br><br>
+<select name="rating" >
+  <option value="0">Select rating</option>
+   <option value="1">> 1</option>
+   <option value="2">> 2</option>
+   <option value="3">> 3</option>
+   <option value="4">> 4</option>
+   <option value="5">5</option>
+</select> <br><br>
+<button type="button" onclick="check_blank2()"> Search </button><br><br>
+</div>
+
+<br> 
+
+<div class="myDiv">
+Select graph to display: <br><br>
+<select name="mode" onchange="update_page()">
+  <option value="default">Select item</option>
+   <option value="ann_graph">Annotation Graph</option>
+   <option value="rate_graph">Ratings Graph</option>
+   
+</select> <br> <br> 
+</div>
+
+
+</div>
+<div  class="maintext" id="maintext" >
+<bold ><u><center><p style="font-size:30px">Coursera Courses Annotation Project</center></p></u></bold>
+<p><strong>Purpose:</strong></p>
+<p>The purpose of this project is to create a more detailed filtering system for user reviews on Coursera (<a href="https://www.coursera.org/" rel="nofollow">https://www.coursera.org/</a>). Currently, reviews on Coursera are only being categorized into 2 aspects:</p>
+<ol>
+<li>Whether the reviewer has completed the course (learners/completers)</li>
+<li>Reviewers' overall perception of the course (1-5 stars)</li>
+</ol>
+<p>Our team would like to break down each review into different aspects and label them, so that a potential learner can easily find reviews that mention aspects of the course that are of their interest.</p>
+
+<p><strong>Corpus:</strong></p>
+<p>This corpus contains 19822 reviews over 90 Coursera courses along with some metadata about each course. Each course is associated with a unique URL, a course name, the instructor name (in the case where there are multiple instructors to the course, only the first name is shown), and an overall rating of the course ranging from 1 to 5 stars. Each review is also associated with a rating that the user has chosen, which contributes to the overall rating of the course.</p>
+
+<p><strong>Annotation:</strong></p>
+<p>289 reviews have been annotated based on 5 labels: Content, Course delivery, Workload, Difficulty, and Usefulness. Our team have done a multi-label annotation, so that the annotators would choose all applicable aspects that a text has mentioned.</p>
+<ul>
+<li>Breakdown of the annotations:</li>
+<li>39 reviews annotated as containing "Content"</li>
+<li>171 reviews annotated as containing "Course delivery"</li>
+<li>9 reviews annotated as containing "Workload"</li>
+<li>22 reviews annotated as containing "Difficulty"</li>
+<li>103 reviews annotated as containing "Usefulness"</li>
+</ul>
+</div>
+
+</div>
+</body>
+</html>

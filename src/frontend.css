@@ -1,0 +1,56 @@
+ .sidebar { 
+        float:left; 
+        width:25%; 
+            } 
+  
+ .maintext { 
+        float:right; 
+        width:75%;      
+        font-size: 20px;
+
+        text-align: justify;
+        text-justify: inter-word;
+            }      
+
+
+#table-wrapper {
+  position:relative;
+}
+#table-scroll {
+  height:800px;
+  overflow:auto;  
+  margin-top:20px;
+}
+
+
+
+ .ex_table { 
+        
+        font-size: 15px;
+        table-layout: fixed; 
+        width: 95%;
+        background-color: #d2f8d2;
+         border: 1px outset black;
+         border-collapse: collapse;
+         margin-left: auto; 
+          margin-right: auto;
+            }           
+
+.myDiv {
+          border: 2px outset black;
+          background-color: lightblue;    
+          text-align: center;
+         font-weight: bold;
+        
+    
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+ width:1px;
+    word-wrap: break-word;
+    
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
